@@ -107,7 +107,7 @@ analytics:
 # Site Author
 author:
   name             : "Jerry Chae"
-  avatar           : "/images/bio-photo.jpg"
+  avatar           : "https://argos-labs.github.io/images/bio-photo.jpg"
   bio              : "SVP ENGINEERING"
   location         : "SAN JOSE CA"
   email            :
