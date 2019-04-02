@@ -1,20 +1,31 @@
 ---
-title: "Getting Started Guide for ARGOS-LABS plugin"
+title: "Getting Started Guide with ARGOS-LABS RPA+ plugin"
 date: 2019-03-22 08:26:28+0900
 categories: 
   - plugin 
 toc: true
 ---
 
-# Getting Started Guide for ARGOS-LABS plugin
+ARGOS-LABS RPA+ have open architecture using Plugin.
+This guide is the `Getting Started Guide` with ARGOS-LABS RPA+ plugin.
 
-## Running Environments
+Once you finish this simple plugin guide you can build your own plugin.
+This plugin program is not only for ARGOS-LABS RPA+ but can be used any kind of purpose as general CLI program.
+
+# Running Environments
+
+Plugin can be developed in Windows, Linux or Mac. However this guide is built these environments:
+
+* OS: Windows 10 Pro
+* Prerequsite Programs:
+	* Python interpreter 3.7.x
+	* 
 
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00010.png)
 
-## Prerequsite Programs
+# Prerequsite Programs
 
-### PyCharm
+## PyCharm
 
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00020.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00030.png)
@@ -25,7 +36,7 @@ toc: true
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00080.png)
 
 
-### Python 3
+## Python 3
 
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00090.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00100.png)
@@ -37,38 +48,38 @@ toc: true
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00160.png)
 
 
-## Preparation
+# Preparation
 
-### VirtualEnv
+## VirtualEnv
 
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00170.png)
 
-### Plugin Package Manager
+## Plugin Package Manager
 
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00180.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00190.png)
 
-#### .argos-rpa.conf
+### .argos-rpa.conf
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00200.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00210.png)
 
-### alabs.ppm
+## alabs.ppm
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00220.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00230.png)
 
-## Preparation of plugin Development
+# Preparation of plugin Development
 
-### Copy from template
+## Copy from template
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00240.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00250.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00260.png)
 
-### Starting PyCharm
+## Starting PyCharm
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00270.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00280.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00290.png)
 
-### PyCharm Settings
+## PyCharm Settings
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00300.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00310.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00320.png)
@@ -77,15 +88,15 @@ toc: true
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00350.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00360.png)
 
-## First Run / Debug
+# First Run / Debug
 
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00370.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00380.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00390.png)
 
-### Making New Plugin
+## Making New Plugin
 
-#### Copying from HelloWorld
+### Copying from HelloWorld
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00400.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00410.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00420.png)
@@ -97,29 +108,29 @@ toc: true
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00480.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00490.png)
 
-#### __init__.py
+### __init__.py
 
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00500.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00510.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00520.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00530.png)
 
-#### change icon
+### change icon
 
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00540.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00550.png)
 
-#### prerequisite modues
+### prerequisite modues
 
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00560.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00570.png)
 
-#### Completion of __init__.py
+### Completion of __init__.py
 
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00580.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00590.png)
 
-#### Unittest for plugin
+### Unittest for plugin
 
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00600.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00610.png)
@@ -127,11 +138,11 @@ toc: true
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00630.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00640.png)
 
-#### configuration of plugin
+### configuration of plugin
 
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00650.png)
 
-## build and submit
+# build and submit
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00660.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00670.png)
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00680.png)
