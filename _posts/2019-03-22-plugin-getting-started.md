@@ -132,7 +132,7 @@ Next is for setting up Python Interpreter.
 * type `pip list` to list installed modules. Next shows the command and results.
 > In example machine, the user name is `Administrator`. So the prompt shows `C:\Users\Administrator>`. If your user name is toor then then prompt will show `C:\Users\toor>`. 
 
-```python
+```Shell
 C:\Windows\system32>python -VPython 3.7.3C:\Windows\system32>pip listPackage    Version---------- -------pip        19.0.3setuptools 40.8.0
 ```
 
@@ -169,7 +169,7 @@ You can make your own virtual environment as follows:
 	* `(py3) C:\Users\user>` prompt means `py3` virtual environment.
 	* Every modules or plugins in `py3` venv are only valid on `py3` venv.
 
-```python
+```Shell
 C:\>cd %USERPROFILE%C:\Users\Administrator>python -m venv py3C:\Users\Administrator>py3\Scripts\activate(py3) C:\Users\Administrator>pip listPackage    Version---------- -------pip        19.0.3setuptools 40.8.0```
 
 ![00170 cmd python venv](https://argos-labs.github.io/images/gst-captures/00170.png)
@@ -180,19 +180,19 @@ C:\>cd %USERPROFILE%C:\Users\Administrator>python -m venv py3C:\Users\Admini
 
 Above `Making Virtual Environment` section shows how to make a new virtual environment named `py3`. Once the `py3` virtual environment is made, next time you just enter the virtual environment.
 
-```python
+```Shell
 C:\>cd %USERPROFILE%C:\Users\Administrator>py3\Scripts\activate(py3) C:\Users\Administrator>
 ```
 
 Or directly the execute `activate`.
 
-```python
+```Shell
 C:\Users\Administrator>%USERPROFILE%\py3\scripts\activate(py3) C:\Users\Administrator>
 ```
 
 When everything is done, you need to exit the virtual environment. you can do this `deactivate` command.
 
-```python
+```Shell
 (py3) C:\Users\Administrator>deactivateC:\Users\Administrator>
 ```
 
@@ -208,7 +208,7 @@ Next explanation is how to install `Plugin Package Manager`.
 * You need command prompt which is entered virtual environment. You can refer above `Enter Virtual Environment` section.
 * Install with command: `pip install -U alabs.ppm alabs.common --index http://pypi.argos-labs.com:8080 --trusted-host pypi.argos-labs.com`
 
-```python
+```Shell
 (py3) C:\Users\Administrator>pip install -U alabs.ppm alabs.common --index http://pypi.argos-labs.com:8080 --trusted-host pypi.argos-labs.comLooking in indexes: http://pypi.argos-labs.com:8080Collecting alabs.ppm  Downloading http://pypi.argos-labs.com:8080/packages/alabs.ppm-1.327.2123-py3-none-any.whlCollecting alabs.common  Downloading http://pypi.argos-labs.com:8080/packages/alabs.common-1.327.1200-py3-none-any.whlCollecting requests (from alabs.ppm)  Using cached https://files.pythonhosted.org/packages/7d/e3/20f3d364d6c8e5d2353c72a67778eb189176f08e873c9900e10c0287b84b/requests-2.21.0-py2.py3-none-any.whlCollecting PyYAML (from alabs.ppm)  Using cached https://files.pythonhosted.org/packages/a2/50/d42aa0b14fd7b04d287fa739c16e49d9eb79d364a6aa0c5df6ecdeef3dd4/PyYAML-5.1-cp37-cp37m-win32.whlCollecting idna<2.9,>=2.5 (from requests->alabs.ppm)  Using cached https://files.pythonhosted.org/packages/14/2c/cd551d81dbe15200be1cf41cd03869a46fe7226e7450af7a6545bfc474c9/idna-2.8-py2.py3-none-any.whlCollecting certifi>=2017.4.17 (from requests->alabs.ppm)  Using cached https://files.pythonhosted.org/packages/60/75/f692a584e85b7eaba0e03827b3d51f45f571c2e793dd731e598828d380aa/certifi-2019.3.9-py2.py3-none-any.whlCollecting chardet<3.1.0,>=3.0.2 (from requests->alabs.ppm)  Using cached https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whlCollecting urllib3<1.25,>=1.21.1 (from requests->alabs.ppm)  Using cached https://files.pythonhosted.org/packages/62/00/ee1d7de624db8ba7090d1226aebefab96a2c71cd5cfa7629d6ad3f61b79e/urllib3-1.24.1-py2.py3-none-any.whlInstalling collected packages: idna, certifi, chardet, urllib3, requests, PyYAML, alabs.ppm, alabs.commonSuccessfully installed PyYAML-5.1 alabs.common-1.327.1200 alabs.ppm-1.327.2123 certifi-2019.3.9 chardet-3.0.4 idna-2.8 requests-2.21.0 urllib3-1.24.1
 ```
 > `-U` or `--upgrade` option after `install` can upgrade to latest version.
@@ -258,7 +258,7 @@ The simplist form is:
 * To begin with `CMD.EXE` enter virtual environment with command, `%USERPROFILE%\py3\Scripts\activate`
 * `alabs.ppm` without any parameter says help output.
 
-```python
+```Shell
 (py3) C:\work\plugin-demo-master\argoslabs\ai\tts>alabs.ppmc:\users\administrator\py3\lib\site-packages\alabs\ppm\__init__.py:660: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.  dcf = yaml.load(ifp)Need command for ppm.usage: alabs.ppm [-h] [--new-py] [--venv] [--clean] [--verbose]                 {test,build,submit,upload,clear,clear-py,clear-all,get,install,show,uninstall,search,dumpspec,list,list-repository,pip,py,setup}                 ...ARGOS-LABS Plugin Package ManagerThis manager use private PyPI repository.set C:\Users\Administrator\.argos-rpa.conf as follows:---repository:  url: http://pypi.argos-labs.com:8080private-repositories:  - name: internal    url: http://10.211.55.2:48080    username: user    password: pass  - name: external    url: http://pypi.argos-labs.com:8080    username: user    password: pass* repository is the main plugin modules's store  * url is the url of ARGOS RPA+ main pypi module  NB) ARGOS RPA+ main module is not allowed to upload directly      but submit first and then ARGOS team to decide* private-repositories are the list of user's private plugin modules's store  * name is the name of private repository (for example "internal", "external")  * url is the url of pypi module  * username is the user name at pypi repository  * password is the user password at pypi repository  NB) username and password is only needed for upload      upload is only valid for private repositoriespositional arguments:  {test,build,submit,upload,clear,clear-py,clear-all,get,install,show,uninstall,search,dumpspec,list,list-repository,pip,py,setup}                        ppm command help    test                test this module    build               build this module    submit              submit to upload server    upload              upload this module to pypi server    clear               clear all temporary folders    clear-py            clear py.win32 virtual environment    clear-all           clear all temporary folders and virtual environment    get                 get configuration    install             install module    show                show module info    uninstall           uninstall module    search              search keywords    dumpspec            dumpspec keywords    list                list installed module    list-repository     list all modules at remote    pip                 pip command    py                  python command    setup               setup command with setup.yamloptional arguments:  -h, --help            show this help message and exit  --new-py              making new python venv environment at py.win32  --venv                if set use package top py.win32 for virtual env. If not set. Use system python instead.  --clean, -c           clean all temporary folders, etc.  --verbose, -v         verbose output eg) -v, -vv, -vvv, ...
 ```
 
@@ -268,7 +268,7 @@ One of commands is searching specific plugin with a name.
 The most official plugin modules are started with `argoslabs.` prefix.
 You can search all plugin modules:
 
-```python
+```Shell
 (py3) C:\work\plugin-demo-master\argoslabs\ai\tts>cd \(py3) C:\>alabs.ppm search argoslabsc:\users\administrator\py3\lib\site-packages\alabs\ppm\__init__.py:660: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.  dcf = yaml.load(ifp)start search ...argoslabs.data.rdb (1.313.1857)    - 1.313.1857argoslabs.api.rossum (1.327.1355)  - 1.327.1355argoslabs.api.rest (1.315.1054)    - 1.315.1054argoslabs.data.excel (1.325.1359)  - 1.325.1359argoslabs.data.json (1.324.2344)   - 1.324.2344argoslabs.ai.tts (1.330.1500)      - 1.330.1500done.
 ```
 
@@ -678,7 +678,7 @@ You can run the `build.bat`.
 * Go to the `tts` folder.
 * Run the `build.bat`
 
-```python
+```Shell
 C:\>%USERPROFILE%\py3\Scripts\activate(py3) C:\>cd \work\plugin-demo-master\argoslabs\ai\tts(py3) C:\work\plugin-demo-master\argoslabs\ai\tts>build.bat
 ```
 
