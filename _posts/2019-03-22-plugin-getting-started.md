@@ -130,7 +130,7 @@ Next is for setting up Python Interpreter.
 
 * type `python -V` at command prompt. It must say `Python 3.7.3`.
 * type `pip list` to list installed modules. Next shows the command and results.
-> In example machine, the user name is `Administrator`. So the prompt shows `C:\Users\Administrator>`. If your user name if toor then then prompt will show `C:\Users\toor>`. 
+> In example machine, the user name is `Administrator`. So the prompt shows `C:\Users\Administrator>`. If your user name is toor then then prompt will show `C:\Users\toor>`. 
 
 ```cmd
 C:\Windows\system32>python -VPython 3.7.3C:\Windows\system32>pip listPackage    Version---------- -------pip        19.0.3setuptools 40.8.0
