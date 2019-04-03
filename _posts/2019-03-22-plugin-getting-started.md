@@ -360,60 +360,332 @@ Next is optional options.
 
 # First Run / Debug
 
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00370.png)
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00380.png)
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00390.png)
+This `pluin-demo-master` project has two demo plugin: 
 
-## Making New Plugin
+* `argoslabs\demo\helloworld`: The most simple but complete plugin sample.
+* `argoslabs\demo\argtest`: The most complex user arguments sample.
 
-### Copying from HelloWorld
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00400.png)
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00410.png)
+Every plugin has it's own unittest.
+Let's just debug the unittest for `argoslabs\demo\argtest`.
+
+## Debug unittest
+
+* Left panel show `Project` list.
+* Double click `argoslabs\demo\helloworld\tests\test_me.py`.
+* Then in editor pane `test_me.py` shows up.
+
+![00370 select test_me.py](https://argos-labs.github.io/images/gst-captures/00370.png)
+
+* Right click `argoslabs\demo\helloworld\tests\test_me.py`.
+* Select `Debug 'Unitests in test_me...'`.
+* Then `Debug` pane comes up at bottom.
+
+![00380 debug test_me.py](https://argos-labs.github.io/images/gst-captures/00380.png)
+
+* There are four unit tests.
+* The result says, `Ran 4 tests in 0.028s. OK`
+
+![00390 unittest](https://argos-labs.github.io/images/gst-captures/00390.png)
+
+> * Unittest must be implemented and file name must be starts with `test_`.
+> * `alabs.ppm test` automatically run all test files starts with `test_`.
+
+# Making New Plugin
+
+It's time making a new plugin named `argoslabs.ai.tts`.
+This plugin source is located in [https://github.com/argos-labs/plugin-tts](https://github.com/argos-labs/plugin-tts).
+
+## Making proper python package
+
+Let us categorize `argoslabs` / `ai` / `tts` that is to say `argoslabs.ai.tts`. Above `argoslabs.demo.helloworld` plugin has two python package `demo` and `helloworld`.
+
+So next steps makeing `ai` and `tts` python package.
+
+* To create a `ai` python package, right click the `argoslabs` folder at `Project` pane and then select `New>Python Package`.
+
+![00400 new package](https://argos-labs.github.io/images/gst-captures/00400.png)
+
+* Type `ai` at `New Package` window. 
+* Click `OK` button.
+* And then sub folder named `ai` is created from `argoslabs`.
+
+![00410 ai package](https://argos-labs.github.io/images/gst-captures/00410.png)
+
+* To create a `tts` python package, right click the `ai` folder and then select `New>Python Package`.
+
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00420.png)
+
+* Type `tts` at `New Package` window. 
+* Click `OK` button.
+* And then sub folder named `tts` is created from `ai`.
+
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00430.png)
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00440.png)
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00450.png)
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00460.png)
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00470.png)
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00480.png)
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00490.png)
 
-### __init__.py
+## Copying from HelloWorld
 
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00500.png)
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00510.png)
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00520.png)
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00530.png)
+Now let us copy all files and sub folder from `helloworld` to `tts`.
 
-### change icon
+* Expand folder `argoslabs\demo\helloworld`.
+* Click first `tests` sub folder.
+* Press down `Shift` key and click the last file `setup.yaml` and then release `Shift` key. This action select all sub folder and files.
 
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00540.png)
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00550.png)
+![00440 copy helloworld](https://argos-labs.github.io/images/gst-captures/00440.png)
 
-### prerequisite modues
+* In selected status, right click and select `Copy`.
 
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00560.png)
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00570.png)
+![00450 copy](https://argos-labs.github.io/images/gst-captures/00450.png)
 
-### Completion of __init__.py
+* Right click `argoslabs\ai\tts` and then select `Paste`.
 
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00580.png)
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00590.png)
+![00460 paste](https://argos-labs.github.io/images/gst-captures/00460.png)
 
-### Unittest for plugin
+* The `Copy` window shows up.
+* Click `OK` button.
 
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00600.png)
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00610.png)
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00620.png)
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00630.png)
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00640.png)
+![00470 Copy](https://argos-labs.github.io/images/gst-captures/00470.png)
 
-### configuration of plugin
+* The `Copy` windows says, "File '__init__.py' already exists in directory 'C:/work/plugin-demo-master/argoslabs/ai/tts'.
+* Click `Overwrite` button.
 
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00650.png)
+![00480 overwrite](https://argos-labs.github.io/images/gst-captures/00480.png)
+
+## __init__.py
+
+Plugin's main script is located at `__init__.py` that python package so the file is `argoslabs\ai\tts\__init__.py`.
+
+We can see the doc string from line 3 to 13 in `__init__.py` editor window.
+And some comments from line 13 to 23. You can change any contents for this.
+
+![00500 comments](https://argos-labs.github.io/images/gst-captures/00500.png)
+
+You can change the main function from `helloworld` into `do_tts`.
+
+* Select by double click `helloworld` at line 33.
+* Type `Shift+F6` keys.
+* At `Rename` window type `do_tts`.
+* Click `Refactor` button.
+
+![00510 refactor](https://argos-labs.github.io/images/gst-captures/00510.png)
+
+* `Refactoring Preview` pane comes up at bottom side.
+* Click `Do Refactor` button.
+
+![00520 do refactor](https://argos-labs.github.io/images/gst-captures/00520.png)
+
+* At lines from 53 to 61 there is a instance definition of `ModuleContext` class with `with` clause.
+* This `ModuleContext` class defines the plugin itself.
+	* `owner` is the plugin owner. Official plugin's owner is `ARGOS-LABS`.
+	* `group` is the group name for plugin.
+	* `vresion` is the specific version.
+	* `platform` defines the list of running platform.
+		* `windows` is for Windows.
+		* `darwin` is for Mac OS X.
+		* `linux` is for Linux.
+	* `output_type` is just for result type. Currently this option is not used any more.
+	* `display_name` is the displayed name at `Stu`.
+	* `icon_path` is the `icon.*` icon file folder. `get_icon_path(__file__)` is the defult with same folder with `__init__.py`.
+	* `description` is the description.
+
+![00530 ModuleContext](https://argos-labs.github.io/images/gst-captures/00530.png)
+
+## change icon
+
+The `helloworld` default icon is:
+
+![00540 default icon](https://argos-labs.github.io/images/gst-captures/00540.png)
+
+But we can change it with:
+
+![00550 new icon](https://argos-labs.github.io/images/gst-captures/00550.png)
+
+> * Your plugin will be submitted to ARGOS-LABS plugin submitted repository.
+> * The icon can be changed by ARGOS-LABS for consistency with other icons.
+
+## prerequisite modues
+
+We need some other modules already provided offcial [pypi repository](https://pypi.org).
+
+### requirements.txt
+
+In python prerequisite third party modules defined in [requirements.txt](https://pip.pypa.io/en/stable/user_guide/#requirements-files) file.
+
+We add two prerequisite modues.
+
+* `gTTS` module is for google TTS engine.
+* `playsound` module is for play `mp3` or `wave` sound file.
+
+![00560 requirements.txt](https://argos-labs.github.io/images/gst-captures/00560.png)
+
+### Install such prerequisite modues
+
+You can install the prerequisite modues:
+
+* Run `CMD.EXE` and enter virtual environment with command `py3\Scripts\activate`.
+* Change into the plugin folder with command `cd \work\pluin-demo-master\argoslabs\ai\tts`.
+* You can install modules with command `pip install -r requirements.txt`.
+
+![00570 install requirements.txt](https://argos-labs.github.io/images/gst-captures/00570.png)
+
+## Completion of __init__.py
+
+Now you can complete the `__init__.py` script.
+
+> You can get the complete `argoslabs.ai.tts` [source](https://github.com/argos-labs/plugin-tts).
+
+`argoslabs.ai.tts` plugin takes 5 arguments, so we define 5 argument definition.
+5 arguments consists three options and two parameters:
+
+* There are three options.
+	* `--save-mp3` or `-o` option is for saving result TTS `mp3` file at line 172 ~ 174. This option need filename to save.
+	* `--lang` or `-l` option is for select the language used in TTS engine. Default is `en`, english. This argument need language made by two alphabet.
+	* `--slow` or `-s` option is flag to say slowly or not. This option need no more argument.
+* There are two parameters which means mandatory arguments at line 182 ~ 185.
+	* `engine` argument must be defined. At this source only `google` is allowed.
+	* `msg` argument must be defined for saying.
+
+> * Above argument definition is the main key to use ARGOS-LABS RPA+ `Stu` program.
+> * We explain it in detailed article. 
+
+![00580 argument](https://argos-labs.github.io/images/gst-captures/00580.png)
+
+We complete the `do_tts` function at line 118~151.
+> One of the main advantage using python is simple code than any other programming language.
+
+![00590 do_tts](https://argos-labs.github.io/images/gst-captures/00590.png)
+
+## Unittest for plugin
+
+You can edit test_me.py unittest file, `argoslabs\ai\tts\tests\test_me.py`.
+
+### make your own unittest
+
+* Edit top comments or doc string with your own information.
+
+![00600 test_me](https://argos-labs.github.io/images/gst-captures/00600.png)
+
+Then we can define each unittest functions like `testnnnn_...`:
+
+* `test0100_empty_parameter`: empty user argument make error, exception.
+* `test0110_unknown_engine`: other than `google` engine make error, exception.
+* `test0120_missing_msg `: without `msg` parameter make error, exception.
+* `test0200_say_hello`: say "Hello world?" in english.
+* `test0210_say_hello_slow`: say "Hello world?" in english more slowly.
+* `test0250_say_hello_ko`: say some words in korean.
+* `test0260_say_hello_ja`: say some words in japaneese.
+* `test0270_say_hello_zh_cn`: say some words in chineese.
+* `test0300_say_hello_save_mp3` and `test0310_say_hello_save_mp3`: say some words in english and keep it with `mp3` file.
+
+> The more unittest make the program more robust moreover when you add new feature all previous unittest used as regression test.
+
+![00610 test_me second page](https://argos-labs.github.io/images/gst-captures/00610.png)
+
+### debug unittest
+
+You can debug the `test_me.py` unittest.
+
+* Right click the `test_me.py` file and then select `Debug 'Unittests in test_me...'`.
+
+![00630 debug test_me](https://argos-labs.github.io/images/gst-captures/00630.png)
+
+* `Debug` pane comes up bottom side.
+* Left `Test Results` says the reuslt of all unittest.
+* Keep debugging the unittest until every unittest is passed.
+
+![00640 debugging test_me](https://argos-labs.github.io/images/gst-captures/00640.png)
+
+## configuration of plugin
+
+`setup.yaml` is the configuration of plugin.
+This is related with [setup.py specification](https://packaging.python.org/tutorials/packaging-projects/).
+> Note. Be careful with `argoslabs.ai.tts` before `['icon.*']`. Copyed contents is `argoslabs.demo.helloworld`. If this name is not matched the icon will not show.
+
+![00650 ](https://argos-labs.github.io/images/gst-captures/00650.png)
 
 # build and submit
-![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00660.png)
+
+Once you finished the `__init__.py` main script and `test_me.py` unittest. It's time to build and submit.
+
+## Edit build.bat
+
+All of these job can be run by `build.bat` in Windows using `alabs.pps` plugin package manager.
+
+* `alabs.ppm --venv test` will test all test scripts starts with `test`.
+	* `--venv` make the new temporary virtual environment at `%USERPROFILE%\py.windows`.
+	* Using this venv every dependent modules are installed from the clean environment.
+	* If any unittest is not ok, then exit with `test have error` message. 
+	
+```bat
+REM test
+alabs.ppm --venv %VB% test
+IF NOT %ERRORLEVEL% == 0 (
+	echo "test have error"
+    goto errorExit
+)
+```
+
+* `alabs.ppm --venv build` will build release type of `wheel`.
+	* If build command failed, then exit with `build have error` message. 
+
+```bat
+REM # build
+alabs.ppm --venv %VB% build
+IF NOT %ERRORLEVEL% == 0 (
+	echo "build have error"
+    goto errorExit
+)
+```
+
+* `alabs.ppm --venv submit` will submit zipped plugin to ARGOS-LABS plugin upload server.
+	* Your uploaded zipped plugin can be a candidate of official ARGOS-LABS plugin available to all users.
+	* Your candidate code will be scanned and checked with any security issue or harmful code.
+	* If your candidate passed then your plugin published to official plugin repository, `pypi.argos-labs.com`.
+	* You can skip this `submit` process, instead you can upload this plugin to your own private pypi server and the result is noticed to you by email which is described at `setup.yaml`.
+	* If submit command failed, then exit with `submit have error` message. 
+
+```bat
+REM # submit to repository
+alabs.ppm %VB% submit
+IF NOT %ERRORLEVEL% == 0 (
+	echo "submit have error"
+    goto errorExit
+)
+```
+
+* `alabs.ppm --venv upload` will upload your plugin release to your private pypi server.
+	* If there is no parameter after upload then then first item at `private-repositories` list at `.argos-rpa.conf` file.
+	* If you want choose one private pypi server then `name` item will be followed after upload command.
+	* You can use your own plugin for your site only with at your own risk. 
+
+```bat
+REM # upload to private repository
+alabs.ppm --venv %VB% upload
+IF NOT %ERRORLEVEL% == 0 (
+	echo "upload have error"
+    goto errorExit
+)
+```
+
+> * You can edit your build.bat. If you do not know well then just use this `build.bat`.
+> * In Mac OS X or Linux platform you can use `build.sh`.
+
+![00660 build.bat](https://argos-labs.github.io/images/gst-captures/00660.png)
+
+## Run the build.bat
+
+You can run the `build.bat`.
+
+* Run `CMD.EXE` and enter `py3` virtual environment.
+* Go to the `tts` folder.
+* Run the `build.bat`
+
+``` cmd
+C:\>%USERPROFILE%\py3\Scripts\activate(py3) C:\>cd \work\plugin-demo-master\argoslabs\ai\tts(py3) C:\work\plugin-demo-master\argoslabs\ai\tts>build.bat
+```
+
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00670.png)
+
+A few minites later you can see `"Build all success!"`. Then all is done for your side.
+
 ![00010 clean up windows 10 desktop](https://argos-labs.github.io/images/gst-captures/00680.png)
 
+Good luck!
