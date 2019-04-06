@@ -34,7 +34,7 @@ First of all let's install PyCharm IDE.
 
 ## PyCharm
 
-> If you already your own IDE then skip to [the next section](https://argos-labs.github.io/plugin/plugin-getting-started/#python-3).
+> If you have already your own IDE then skip to [the next section](https://argos-labs.github.io/plugin/plugin-getting-started/#python-3).
 
 * Open Web browser. (Next example, Chrome browser is used but other browsers are fine.)
 * Goto [google search](https://www.google.com)
@@ -83,8 +83,8 @@ Next is for setting up Python Interpreter.
 
 * Open Web browser.
 * Goto [google search](https://www.google.com)
-* Type `python 3.7 windows download`
-* Select first result, [Download Python | Python.org](https://www.python.org/downloads/)
+* Type `python 3.7 windows download`.
+* Select first result, [Download Python - Python.org](https://www.python.org/downloads/)
 
 ![00090 google search python 3.7 download](https://argos-labs.github.io/images/gst-captures/00090.png)
 
